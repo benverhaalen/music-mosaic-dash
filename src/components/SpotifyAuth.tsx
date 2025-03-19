@@ -6,7 +6,7 @@ import { Music } from 'lucide-react';
 
 interface SpotifyAuthProps {
   className?: string;
-  variant?: 'default' | 'outline' | 'secondary' | 'subtle';
+  variant?: 'default' | 'outline' | 'secondary' | 'ghost' | 'link';
   size?: 'default' | 'sm' | 'lg' | 'icon';
 }
 
@@ -25,10 +25,10 @@ const SpotifyAuth = ({
             <img 
               src={user.imageUrl} 
               alt={user.displayName}
-              className="w-8 h-8 rounded-full object-cover"
+              className="w-8 h-8 rounded-full object-cover shadow-md"
             />
           ) : (
-            <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">
+            <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center shadow-md">
               <span className="text-xs font-bold">
                 {user?.displayName?.charAt(0) || '?'}
               </span>
@@ -51,7 +51,7 @@ const SpotifyAuth = ({
           onClick={login}
           variant={variant}
           size={size}
-          className="relative overflow-hidden button-shine"
+          className="relative overflow-hidden button-shine rounded-full bg-white/20 backdrop-blur-md shadow-button dark:bg-gray-800/30 hover:bg-white/30 dark:hover:bg-gray-800/40"
         >
           <Music className="w-4 h-4 mr-2" />
           Connect with Spotify

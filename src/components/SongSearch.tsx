@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -24,7 +23,6 @@ const SongSearch = ({ onSelectTrack, className = '' }: SongSearchProps) => {
   const searchTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const searchRef = useRef<HTMLDivElement>(null);
   
-  // Handle outside click to close search results
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
@@ -38,7 +36,6 @@ const SongSearch = ({ onSelectTrack, className = '' }: SongSearchProps) => {
     };
   }, []);
   
-  // Handle search with debounce
   useEffect(() => {
     if (!tokens?.accessToken) return;
     
@@ -98,7 +95,7 @@ const SongSearch = ({ onSelectTrack, className = '' }: SongSearchProps) => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search for songs..."
-          className="pl-10 pr-10 h-12 text-base border-2 transition-all focus-visible:ring-accent"
+          className="pl-10 pr-10 h-12 text-base rounded-full bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border-2 shadow-button transition-all focus-visible:ring-accent"
           onFocus={() => {
             if (searchResults.length > 0) {
               setShowResults(true);
@@ -123,7 +120,7 @@ const SongSearch = ({ onSelectTrack, className = '' }: SongSearchProps) => {
           type="fade"
           className="absolute mt-1 w-full z-20"
         >
-          <GlassmorphicCard className="p-2 max-h-[300px] overflow-y-auto">
+          <GlassmorphicCard className="p-2 max-h-[300px] overflow-y-auto rounded-xl shadow-xl">
             {isSearching ? (
               <div className="flex justify-center items-center py-4">
                 <div className="music-waves">

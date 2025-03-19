@@ -11,7 +11,6 @@ import {
   BarChart3,
   Menu,
   X,
-  Music,
 } from 'lucide-react';
 
 interface LayoutProps {
@@ -36,15 +35,12 @@ const Layout = ({ children }: LayoutProps) => {
   };
   
   return (
-    <div className="min-h-screen flex flex-col animated-bg">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <div className="min-h-screen flex flex-col">
+      {/* Header with very dark gray background */}
+      <header className="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-md border-b border-gray-800 shadow-lg">
         <div className="container mx-auto px-4 flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-primary rounded-full p-1.5">
-              <Music className="w-5 h-5 text-white" />
-            </div>
-            <span className="font-bold text-xl">MusicMosaic</span>
+            <span className="font-bold text-2xl text-white tracking-tight">SayList</span>
           </Link>
           
           <div className="hidden md:flex items-center space-x-6">
@@ -69,7 +65,7 @@ const Layout = ({ children }: LayoutProps) => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -83,7 +79,7 @@ const Layout = ({ children }: LayoutProps) => {
       
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-background/90 backdrop-blur-lg pt-16 md:hidden">
+        <div className="fixed inset-0 z-40 bg-gray-900/90 backdrop-blur-lg pt-16 md:hidden">
           <div className="container mx-auto px-4 py-8 flex flex-col items-center">
             <SpotifyAuth className="mb-8" />
             
@@ -94,7 +90,7 @@ const Layout = ({ children }: LayoutProps) => {
                   to={item.path}
                   className={cn(
                     'flex items-center text-lg font-medium py-2',
-                    isActive(item.path) ? 'text-foreground' : 'text-muted-foreground'
+                    isActive(item.path) ? 'text-white' : 'text-gray-400'
                   )}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -107,15 +103,15 @@ const Layout = ({ children }: LayoutProps) => {
         </div>
       )}
       
-      {/* Main content */}
-      <main className="flex-1">
+      {/* Main content with animated gradient background */}
+      <main className="flex-1 gradient-bg">
         {children}
       </main>
       
-      {/* Footer */}
-      <footer className="border-t border-border py-6">
-        <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>MusicMosaic — Discover your music in a whole new way.</p>
+      {/* Footer with very dark gray background */}
+      <footer className="border-t border-gray-800 py-6 bg-gray-900 text-gray-300">
+        <div className="container mx-auto px-4 text-center text-sm">
+          <p>SayList — Discover your music in a whole new way.</p>
           <p className="mt-2">Powered by Spotify. Not affiliated with Spotify AB.</p>
         </div>
       </footer>

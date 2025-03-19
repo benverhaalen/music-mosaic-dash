@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -74,13 +73,9 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				sans: [
-					'SF Pro Display',
-					'Helvetica Neue', 
-					'Helvetica', 
-					'Arial',
-					'sans-serif'
-				],
+				'sf-pro': ['-apple-system', 'BlinkMacSystemFont', 'San Francisco', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'sans-serif'],
+				'sf-pro-display': ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'San Francisco', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'sans-serif'],
+				'sf-pro-text': ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Text', 'San Francisco', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'sans-serif'],
 			},
 			keyframes: {
 				'accordion-down': {
@@ -180,12 +175,13 @@ export default {
 				'xs': '2px',
 			},
 			boxShadow: {
-				'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
-				'glass-hover': '0 8px 32px rgba(0, 0, 0, 0.15)',
-				'button': '0 1px 2px rgba(0, 0, 0, 0.1)',
-				'card': '0 10px 30px -10px rgba(0, 0, 0, 0.1)',
+				'glass': '0 8px 30px rgba(0, 0, 0, 0.2)',
+				'glass-hover': '0 15px 40px rgba(0, 0, 0, 0.3)',
+				'button': '0 4px 8px rgba(0, 0, 0, 0.15)',
+				'card': '0 20px 30px -10px rgba(0, 0, 0, 0.2)',
 			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+

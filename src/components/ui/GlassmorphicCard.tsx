@@ -18,25 +18,25 @@ const GlassmorphicCard = ({
 }: GlassmorphicCardProps) => {
   // Define blur and opacity based on intensity
   const blurMap = {
-    light: 'backdrop-blur-sm',
-    medium: 'backdrop-blur-md',
-    heavy: 'backdrop-blur-lg',
+    light: 'backdrop-blur-md',
+    medium: 'backdrop-blur-lg',
+    heavy: 'backdrop-blur-xl',
   };
   
   const bgOpacityMap = {
-    light: 'bg-white/30 dark:bg-black/20',
-    medium: 'bg-white/50 dark:bg-black/40',
-    heavy: 'bg-white/70 dark:bg-black/60',
+    light: 'bg-white/40 dark:bg-gray-900/30',
+    medium: 'bg-white/50 dark:bg-gray-900/40',
+    heavy: 'bg-white/60 dark:bg-gray-900/50',
   };
   
   return (
     <div
       className={cn(
-        'rounded-2xl border border-white/20 dark:border-white/10',
+        'rounded-xl border border-white/20 dark:border-white/10',
         blurMap[intensity],
         bgOpacityMap[intensity],
-        'shadow-glass',
-        hoverEffect && 'transition-all duration-300 hover:shadow-glass-hover',
+        'shadow-xl',
+        hoverEffect && 'transition-all duration-300 hover:shadow-2xl hover:-translate-y-1',
         className
       )}
       {...props}
