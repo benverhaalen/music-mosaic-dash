@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -131,7 +132,7 @@
   }
 
   .gradient-bg {
-    background: linear-gradient(-45deg, #10B981, #059669, #0EA5E9, #0369A1);
+    background: linear-gradient(-45deg, #00A550, #008744, #00BFFF, #0077BE);
     background-size: 400% 400%;
     animation: gradient-shift 15s ease infinite;
   }

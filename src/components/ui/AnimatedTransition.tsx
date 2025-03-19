@@ -68,8 +68,10 @@ const AnimatedTransition = ({
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setTimeout(() => {
-              entry.target.classList.remove(animations[type].hidden);
-              entry.target.classList.add(animations[type].visible);
+              if (entry.target.classList.contains(animations[type].hidden)) {
+                entry.target.classList.remove(animations[type].hidden);
+                entry.target.classList.add(animations[type].visible);
+              }
             }, delay);
             
             // Once the animation is triggered, we don't need to observe anymore
@@ -96,7 +98,6 @@ const AnimatedTransition = ({
       ref={elementRef}
       className={cn(
         'transition-all',
-        `duration-${duration}`,
         show ? animations[type].visible : animations[type].hidden,
         // Only apply delay if show is true or once is true
         (show || once) && delay > 0 ? `delay-${delay}` : '',

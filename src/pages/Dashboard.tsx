@@ -31,7 +31,7 @@ const Dashboard = () => {
   return (
     <Layout>
       <div className="container mx-auto px-4 py-8">
-        <AnimatedTransition type="fade" className="mb-10">
+        <AnimatedTransition type="fade" duration={400} className="mb-10">
           {isDiscoverPage && (
             <section className="space-y-12">
               <div className="max-w-md mx-auto mb-12 text-center">
@@ -45,7 +45,7 @@ const Dashboard = () => {
               </div>
               
               {selectedTrack && (
-                <AnimatedTransition type="scale">
+                <AnimatedTransition type="scale" duration={400}>
                   <SongRecommendations 
                     seedTrack={selectedTrack}
                     onAddToPlaylist={(track) => console.log('Add to playlist:', track)}

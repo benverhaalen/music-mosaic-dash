@@ -51,29 +51,29 @@ const Index = () => {
                   <div className="grid grid-cols-2 gap-4 transform rotate-6">
                     <GlassmorphicCard className="p-4 transform -rotate-3 hover:rotate-0 transition-transform">
                       <img
-                        src="https://i.scdn.co/image/ab67616d0000b27382b243023b937fd579a35533"
-                        alt="Album Cover"
+                        src="https://i.scdn.co/image/ab67616d0000b273c5649add07ed3720be9d5526"
+                        alt="Channel Orange by Frank Ocean"
                         className="rounded-lg shadow-lg w-full h-auto"
                       />
                     </GlassmorphicCard>
                     <GlassmorphicCard className="p-4 transform rotate-3 hover:rotate-0 transition-transform">
                       <img
-                        src="https://i.scdn.co/image/ab67616d0000b27365a7a7e442dff8439cfc7c05"
-                        alt="Album Cover"
+                        src="https://i.scdn.co/image/ab67616d0000b2732ef53b9ae963702f6ede9f2a"
+                        alt="Her Loss by Drake and 21 Savage"
                         className="rounded-lg shadow-lg w-full h-auto"
                       />
                     </GlassmorphicCard>
                     <GlassmorphicCard className="p-4 transform rotate-6 hover:rotate-0 transition-transform">
                       <img
-                        src="https://i.scdn.co/image/ab67616d0000b273e8b066f70c206551210d902b"
-                        alt="Album Cover"
+                        src="https://i.scdn.co/image/ab67616d0000b2733e8f66593d52df517ea17d2d"
+                        alt="Zach Bryan by Zach Bryan"
                         className="rounded-lg shadow-lg w-full h-auto"
                       />
                     </GlassmorphicCard>
                     <GlassmorphicCard className="p-4 transform -rotate-6 hover:rotate-0 transition-transform">
                       <img
-                        src="https://i.scdn.co/image/ab67616d0000b2734e1cef0cca5abc2bb0a73b4a"
-                        alt="Album Cover"
+                        src="https://i.scdn.co/image/ab67616d0000b273f9ba9b225a8d6bb28faeb79f"
+                        alt="Short n Sweet by Sabrina Carpenter"
                         className="rounded-lg shadow-lg w-full h-auto"
                       />
                     </GlassmorphicCard>
