@@ -58,22 +58,22 @@ const Index = () => {
                     </GlassmorphicCard>
                     <GlassmorphicCard className="p-4 transform rotate-3 hover:rotate-0 transition-transform">
                       <img
-                        src="https://i.scdn.co/image/ab67616d0000b2732ef53b9ae963702f6ede9f2a"
-                        alt="Her Loss by Drake and 21 Savage"
+                        src="https://i.scdn.co/image/ab67616d0000b273b52795d86119cbaaff0a117a"
+                        alt="After Hours by The Weeknd"
                         className="rounded-lg shadow-lg w-full h-auto"
                       />
                     </GlassmorphicCard>
                     <GlassmorphicCard className="p-4 transform rotate-6 hover:rotate-0 transition-transform">
                       <img
-                        src="https://i.scdn.co/image/ab67616d0000b2733e8f66593d52df517ea17d2d"
-                        alt="Zach Bryan by Zach Bryan"
+                        src="https://i.scdn.co/image/ab67616d0000b273d9194aa18fa4c9362b47464f"
+                        alt="Dawn FM by The Weeknd"
                         className="rounded-lg shadow-lg w-full h-auto"
                       />
                     </GlassmorphicCard>
                     <GlassmorphicCard className="p-4 transform -rotate-6 hover:rotate-0 transition-transform">
                       <img
-                        src="https://i.scdn.co/image/ab67616d0000b273f9ba9b225a8d6bb28faeb79f"
-                        alt="Short n Sweet by Sabrina Carpenter"
+                        src="https://i.scdn.co/image/ab67616d0000b2734e1065ce95e1ddb321d10863"
+                        alt="Blonde by Frank Ocean"
                         className="rounded-lg shadow-lg w-full h-auto"
                       />
                     </GlassmorphicCard>
