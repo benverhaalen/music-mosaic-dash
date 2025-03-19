@@ -15,8 +15,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 10% 10%;
 
-    --primary: 205 100% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 220 10% 10%;
 
     --secondary: 120 100% 35%;
     --secondary-foreground: 0 0% 100%;
@@ -56,8 +56,8 @@
     --popover: 220 14% 13%;
     --popover-foreground: 220 33% 98%;
 
-    --primary: 205 100% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 220 10% 10%;
 
     --secondary: 120 100% 35%;
     --secondary-foreground: 0 0% 100%;
@@ -123,7 +123,7 @@
 
 @layer components {
   .glass {
-    @apply bg-white/60 dark:bg-black/60 backdrop-blur-lg border border-white/20 dark:border-white/10 shadow-xl;
+    @apply bg-white/20 dark:bg-black/20 backdrop-blur-lg border border-white/20 dark:border-white/10 shadow-xl;
   }
 
   .glass-card {
@@ -131,45 +131,21 @@
   }
 
   .gradient-bg {
-    background: linear-gradient(-45deg, #0EA5E9, #10B981, #0369A1, #059669);
+    background: linear-gradient(-45deg, #10B981, #059669, #0EA5E9, #0369A1);
     background-size: 400% 400%;
     animation: gradient-shift 15s ease infinite;
   }
 
   .nav-link {
-    @apply relative px-4 py-2 text-gray-400 transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:text-white hover:after:w-full;
+    @apply relative px-4 py-2 text-gray-400 transition-colors hover:text-white;
   }
 
   .nav-link.active {
-    @apply text-white after:w-full;
+    @apply text-white bg-white/10 rounded-full;
   }
 
   .hover-scale {
     @apply transition-transform duration-300 hover:scale-[1.02];
-  }
-
-  .button-shine {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .button-shine::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-      to bottom right,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.4) 50%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    transform: rotate(-45deg);
-    animation: shimmer 3s infinite;
-    z-index: 1;
-    pointer-events: none;
   }
 
   .music-waves {
@@ -190,15 +166,6 @@
 
   .music-wave:nth-child(3) {
     @apply animate-music-wave-3;
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    transform: translateX(-150%) rotate(-45deg);
-  }
-  100% {
-    transform: translateX(150%) rotate(-45deg);
   }
 }
 

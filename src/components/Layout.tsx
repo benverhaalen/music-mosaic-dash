@@ -37,7 +37,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header with very dark gray background */}
-      <header className="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-md border-b border-gray-800 shadow-lg">
+      <header className="sticky top-0 z-50 bg-gray-950/95 backdrop-blur-md border-b border-gray-900 shadow-lg">
         <div className="container mx-auto px-4 flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
             <span className="font-bold text-2xl text-white tracking-tight">SayList</span>
@@ -49,11 +49,16 @@ const Layout = ({ children }: LayoutProps) => {
                 key={item.name}
                 to={item.path}
                 className={cn(
-                  'nav-link',
-                  isActive(item.path) && 'active'
+                  'relative px-4 py-2 text-gray-400 transition-colors hover:text-white',
+                  isActive(item.path) ? 'text-white' : '',
+                  'group'
                 )}
               >
-                {item.name}
+                <span>{item.name}</span>
+                <span className={cn(
+                  'absolute inset-0 rounded-full bg-white/10 opacity-0 transition-opacity group-hover:opacity-100',
+                  isActive(item.path) && 'opacity-100 bg-white/15'
+                )}></span>
               </Link>
             ))}
           </div>
@@ -79,7 +84,7 @@ const Layout = ({ children }: LayoutProps) => {
       
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-gray-900/90 backdrop-blur-lg pt-16 md:hidden">
+        <div className="fixed inset-0 z-40 bg-gray-950/90 backdrop-blur-lg pt-16 md:hidden">
           <div className="container mx-auto px-4 py-8 flex flex-col items-center">
             <SpotifyAuth className="mb-8" />
             
@@ -109,7 +114,7 @@ const Layout = ({ children }: LayoutProps) => {
       </main>
       
       {/* Footer with very dark gray background */}
-      <footer className="border-t border-gray-800 py-6 bg-gray-900 text-gray-300">
+      <footer className="border-t border-gray-900 py-6 bg-gray-950 text-gray-300">
         <div className="container mx-auto px-4 text-center text-sm">
           <p>SayList — Discover your music in a whole new way.</p>
           <p className="mt-2">Powered by Spotify. Not affiliated with Spotify AB.</p>

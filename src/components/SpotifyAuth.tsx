@@ -51,7 +51,7 @@ const SpotifyAuth = ({
           onClick={login}
           variant={variant}
           size={size}
-          className="relative overflow-hidden button-shine rounded-full bg-white/20 backdrop-blur-md shadow-button dark:bg-gray-800/30 hover:bg-white/30 dark:hover:bg-gray-800/40"
+          className="rounded-full bg-white/20 backdrop-blur-md shadow-button dark:bg-gray-800/30 hover:bg-white/30 dark:hover:bg-gray-800/40"
         >
           <Music className="w-4 h-4 mr-2" />
           Connect with Spotify

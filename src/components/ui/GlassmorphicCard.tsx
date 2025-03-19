@@ -24,9 +24,9 @@ const GlassmorphicCard = ({
   };
   
   const bgOpacityMap = {
-    light: 'bg-white/40 dark:bg-gray-900/30',
-    medium: 'bg-white/50 dark:bg-gray-900/40',
-    heavy: 'bg-white/60 dark:bg-gray-900/50',
+    light: 'bg-white/20 dark:bg-gray-900/15',
+    medium: 'bg-white/30 dark:bg-gray-900/20',
+    heavy: 'bg-white/40 dark:bg-gray-900/30',
   };
   
   return (
